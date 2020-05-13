@@ -8,7 +8,7 @@ import numpy as np
 l = 1000
 N = 10000
 
-steps = np.random.choice([-1, 1], size=(N, 1)) + 0.05*np.random.standard_normal((N, 1)) # L steps
+steps = np.random.choice([-1, 1], size=(N, l)) + 0.05*np.random.standard_normal((N, l)) # L steps
 position = np.cumsum(steps, axis= 1)
 
 fig = go.Figure(data = go.Histogram(x= position[:, -1]))
